@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <API_FUNCTION>AUTHORIZATION</API_FUNCTION>
+    <API_DESC>The authorization resource reutrns a token to the client after they successfully authenticate themselves. They serve as proof of identity and are going to be used for the other APIs.</API_DESC>
+    <API_URL>https://api.connect.daf.com/rfms/token</API_URL>
+    <API_TYPE>POST</API_TYPE>
+    <API_HEADER>Authorization</API_HEADER>
+    <API_ID>4</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+  <row>
+    <API_FUNCTION>GET_VEHICLES</API_FUNCTION>
+    <API_DESC>The vehicle resource is used to get a list of all the vehicles the client credentials has access to. The vehicle list is always returned in the same order. The max number of items returned in one call is OEM specific.</API_DESC>
+    <API_URL>https://api.connect.daf.com/rfms/vehicles</API_URL>
+    <API_TYPE>GET</API_TYPE>
+    <API_HEADER>List of vehicles</API_HEADER>
+    <API_ID>1</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+  <row>
+    <API_FUNCTION>GET_VEHICLES_POSITIONS with starttime</API_FUNCTION>
+    <API_DESC>The vehicle position resource is used to get the positions for one or several vehicles. If the vin parameter is not set the response will contain all vehicles the client has access to. If a request is made for data in a period where no data has been received, an empty list will be returned. The max number of items returned in one call is OEM specific.</API_DESC>
+    <API_URL>https://api.connect.daf.com/rfms/vehiclepositions?starttime={startime}</API_URL>
+    <API_TYPE>GET</API_TYPE>
+    <API_HEADER>List of vehicle position</API_HEADER>
+    <API_ID>2</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+  <row>
+    <API_FUNCTION>GET_VEHICLES_POSITIONS with latestOnly</API_FUNCTION>
+    <API_DESC>The vehicle position resource is used to get the positions for one or several vehicles. If the vin parameter is not set the response will contain all vehicles the client has access to. If a request is made for data in a period where no data has been received, an empty list will be returned. The max number of items returned in one call is OEM specific.</API_DESC>
+    <API_URL>https://api.connect.daf.com/rfms/vehiclepositions?latestOnly=true</API_URL>
+    <API_TYPE>GET</API_TYPE>
+    <API_HEADER>List of last vehicle/s position/s</API_HEADER>
+    <API_ID>3</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+  <row>
+    <API_FUNCTION>GET_VEHICLES_STATUSES with latestOnly</API_FUNCTION>
+    <API_DESC>The vehicle status resource is used to get the status reports for one or several vehicles. Using the latestOnly parameter it can be used to get all historical status reports latest known status only.</API_DESC>
+    <API_URL>https://api.connect.daf.com/vehiclestatuses/latestOnly=true</API_URL>
+    <API_TYPE>GET</API_TYPE>
+    <API_HEADER>List of vehicle/s statuses</API_HEADER>
+    <API_ID>5</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+  <row>
+    <API_FUNCTION>GET_VEHICLES_STATUSES with starttime</API_FUNCTION>
+    <API_DESC>The vehicle status resource is used to get the status reports for one or several vehicles. Using the latestOnly parameter it can be used to get all historical status reports between a start and stop time.</API_DESC>
+    <API_URL>https://api.connect.daf.com/vehiclestatuses/starttime={starttime}</API_URL>
+    <API_TYPE>GET</API_TYPE>
+    <API_HEADER>List of vehicle/s statuses</API_HEADER>
+    <API_ID>6</API_ID>
+    <API_VERSION>3.0</API_VERSION>
+  </row>
+</data>

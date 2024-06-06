@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Array of vehicle object</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The vehicle resource is used to get a list of all the vehicles the client credentials has access to. The vehicle list is always returned in the same order. The max number of items returned in one call is OEM specific.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>vehicleResponse:{ "vehicles": [ { "vin": "ABC12345678901234", "customerVehicleName": "Mike's truck", "brand": "DAF TRUCKS", "productionDate": { "day": 1, "month": 4, "year": 2018 }, "type": "TRUCK", "model": "FH", "possibleFuelType": [ "1A" ], "emissionLevel": "EURO_VI", "tellTaleCode": "string", "chassisType": "string", "noOfAxles": 2, "totalFuelTankVolume": 500, "tachographType": "MTCO", "gearboxType": "AUTOMATIC", "bodyType": "CITY_BUS", "doorConfiguration": [ 1, 2, 2 ], "hasRampOrLift": true, "authorizedPaths": [ "/vehiclestatuses", "/vehiclepositions" ] } ] }</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>1</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 UNAUTHORIZED</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authenticated; the Bearer token is missing, invalid or expired.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>2</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 BAD_REQUEST</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The request contains bad syntax or cannot be fulfilled.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>3</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 FORBIDDEN</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authorised; the account does not have authorisation to use this functionality.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>4</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NOT_ACCEPTABLE</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>5</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TOO_MANY_REQUESTS</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The user has sent too many requests in a given amount of time.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>6</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NOT_FOUND</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The requested resource could not be found.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <RESPONSE_ID>7</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Array of positions for one or several vehicles</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The vehicle positions are always returned in the same order, when using latestOnly. The ordering is OEM specific. </RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>{
+  "vehiclePositionResponse": {
+    "vehiclePositions": [
+      {
+        "vin": "ABC12345678901234",
+        "triggerType": {
+          "triggerType": "IGNITION_ON",
+          "context": "RFMS",
+          "triggerInfo": [
+            "VIN12345678901234"
+          ],
+          "driverId": {
+            "tachoDriverIdentification": {
+              "driverIdentification": "12345678901234",
+              "cardIssuingMemberState": "S",
+              "driverAuthenticationEquipment": "DRIVER_CARD",
+              "cardReplacementIndex": "0",
+              "cardRenewalIndex": "0"
+            },
+            "oemDriverIdentification": {
+              "idType": "USB",
+              "oemDriverIdentification": "ABC-123-DEF"
+            }
+          },
+          "ptoId": "string",
+          "tellTaleInfo": {
+            "tellTale": "FUEL_LEVEL",
+            "oemTellTale": "NO_GPS_SIGNAL",
+            "state": "YELLOW"
+          }
+        },
+        "createdDateTime": "2024-04-18T08:29:08.657Z",
+        "receivedDateTime": "2024-04-18T08:29:08.657Z",
+        "gnssPosition": {
+          "latitude": 57.71727,
+          "longitude": 11.921161,
+          "heading": 30,
+          "altitude": 32,
+          "speed": 54.5,
+          "positionDateTime": "2024-04-18T08:29:08.657Z"
+        },
+        "wheelBasedSpeed": 54.3,
+        "tachographSpeed": 54.1
+      }
+    ]
+  },
+  "moreDataAvailable": true,
+  "moreDataAvailableLink": "/rfms/vehiclepositions?starttime=2019-04-04T16:42:49Z&amp;triggerFilter=TIMER",
+  "requestServerDateTime": "2024-04-18T08:29:08.657Z"
+}</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>8</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 BAD REQUEST</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)
+Possible reason: Mandatory field missing, e.g. Authentication Header empty or missing</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>9</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 UNAUTHORIZED</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>10</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 FORBIDDEN</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The request was a valid request, but the server is refusing to respond to it.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>11</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NOT_FOUND</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+	
+The requested resource could not be found but may be available again in the future.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>12</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NOT_ACCEPTABLE</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+	
+The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>13</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TOO_MANY_REQUESTS</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The user has sent too many requests in a given amount of time</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <RESPONSE_ID>14</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Array of positions for one or several vehicles</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The vehicle positions are always returned in the same order, when using latestOnly. The ordering is OEM specific. </RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>{
+  "vehiclePositionResponse": {
+    "vehiclePositions": [
+      {
+        "vin": "ABC12345678901234",
+        "triggerType": {
+          "triggerType": "IGNITION_ON",
+          "context": "RFMS",
+          "triggerInfo": [
+            "VIN12345678901234"
+          ],
+          "driverId": {
+            "tachoDriverIdentification": {
+              "driverIdentification": "12345678901234",
+              "cardIssuingMemberState": "S",
+              "driverAuthenticationEquipment": "DRIVER_CARD",
+              "cardReplacementIndex": "0",
+              "cardRenewalIndex": "0"
+            },
+            "oemDriverIdentification": {
+              "idType": "USB",
+              "oemDriverIdentification": "ABC-123-DEF"
+            }
+          },
+          "ptoId": "string",
+          "tellTaleInfo": {
+            "tellTale": "FUEL_LEVEL",
+            "oemTellTale": "NO_GPS_SIGNAL",
+            "state": "YELLOW"
+          }
+        },
+        "createdDateTime": "2024-04-18T08:29:08.657Z",
+        "receivedDateTime": "2024-04-18T08:29:08.657Z",
+        "gnssPosition": {
+          "latitude": 57.71727,
+          "longitude": 11.921161,
+          "heading": 30,
+          "altitude": 32,
+          "speed": 54.5,
+          "positionDateTime": "2024-04-18T08:29:08.657Z"
+        },
+        "wheelBasedSpeed": 54.3,
+        "tachographSpeed": 54.1
+      }
+    ]
+  },
+  "moreDataAvailable": true,
+  "moreDataAvailableLink": "/rfms/vehiclepositions?starttime=2019-04-04T16:42:49Z&amp;triggerFilter=TIMER",
+  "requestServerDateTime": "2024-04-18T08:29:08.657Z"
+}</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>15</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 BAD REQUEST</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)
+Possible reason: Mandatory field missing, e.g. Authentication Header empty or missing </RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>16</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 UNAUTHORIZED</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Similar to 403 Forbidden, but specifically for use when authentication is required and has failed or has not yet been provided. The response must include a WWW-Authenticate header field containing a challenge applicable to the requested resource.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>17</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 FORBIDDEN</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The request was a valid request, but the server is refusing to respond to it.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>18</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NOT_FOUND</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The requested resource could not be found but may be available again in the future.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>19</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NOT_ACCEPTABLE</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>20</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TOO_MANY_REQUESTS</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>	
+The user has sent too many requests in a given amount of time</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <RESPONSE_ID>21</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Array of vehicle object.</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The vehicle status resource is used to get the status reports for one or several vehicles. </RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>{
+    "vehicleStatusResponse": {
+        "vehicleStatuses": [
+            {
+                "vin": "DCE32323111221",
+                "triggerType": {
+                    "triggerType": "TELL_TALE",
+                    "context": "RFMS",
+                    "tellTaleInfo": {
+                        "tellTale": "PARKING_BRAKE",
+                        "state": "INFO"
+                    }
+                },
+                "createdDateTime": "2024-04-18T05:56:32.000Z",
+                "receivedDateTime": "2024-04-18T05:59:39.949Z",
+                "hrTotalVehicleDistance": 14866905,
+                "snapshotData": {
+                    "gnssPosition": {
+                        "latitude": 51.4338023383898,
+                        "longitude": 5.50820314744339,
+                        "heading": 175,
+                        "altitude": 19,
+                        "speed": 0.0614661,
+                        "positionDateTime": "2024-04-18T05:56:31.000Z"
+                    },
+                    "wheelBasedSpeed": 0.0,
+                    "tachographSpeed": 0.0,
+                    "fuelType": "Diesel",
+                    "fuelLevel1": 8,
+                    "catalystFuelLevel": 91,
+                    "ambientAirTemperature": 4
+                },
+                "uptimeData": {
+                    "tellTaleInfo": [
+                        {
+                            "tellTale": "COOLING_AIR_CONDITIONING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HIGH_BEAM_MAIN_BEAM",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LOW_BEAM_DIPPED_BEAM",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TURN_SIGNALS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HAZARD_WARNING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PROVISIONING_HANDICAPPED_PERSON",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PARKING_BRAKE",
+                            "state": "INFO"
+                        },
+                        {
+                            "tellTale": "BRAKE_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HATCH_OPEN",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FUEL_LEVEL",
+                            "state": "YELLOW"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BATTERY_CHARGING_CONDITION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "POSITION_LIGHTS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FRONT_FOG_LIGHT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "REAR_FOG_LIGHT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PARKING_HEATER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_MIL_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SERVICE_CALL_FOR_MAINTENANCE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_FLUID_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ANTI_LOCK_BRAKE_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "WORN_BRAKE_LININGS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "WINDSCREEN_WASHER_FLUID",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TIRE_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "GENERAL_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STEERING_FLUID_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STEERING_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HEIGHT_CONTROL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "RETARDER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_EMISSION_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "BRAKE_LIGHTS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ARTICULATION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STOP_REQUEST",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PRAM_REQUEST",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "BUS_STOP_BRAKE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ADBLUE_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RAISING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LOWERING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "KNEELING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_COMPARTMENT_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AUXILLARY_AIR_PRESSURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AIR_FILTER_CLOGGED",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FUEL_FILTER_DIFF_PRESSURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "SEAT_BELT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "EBS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ADVANCED_EMERGENCY_BREAKING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ACC",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRAILER_CONNECTED",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ABS_TRAILER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AIRBAG",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "EBS_TRAILER_1_2",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TACHOGRAPH_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ESC_SWITCHED_OFF",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_WARNING_SWITCHED_OFF",
+                            "state": "NOT_AVAILABLE"
+                        }
+                    ],
+                    "engineCoolantTemperature": 22,
+                    "serviceBrakeAirPressureCircuit1": 1000,
+                    "serviceBrakeAirPressureCircuit2": 1000
+                }
+            },
+            {
+                "vin": "ABC12343243434S",
+                "triggerType": {
+                    "triggerType": "TELL_TALE",
+                    "context": "RFMS",
+                    "tellTaleInfo": {
+                        "tellTale": "PARKING_BRAKE",
+                        "state": "INFO"
+                    }
+                },
+                "createdDateTime": "2024-04-26T14:18:18.000Z",
+                "receivedDateTime": "2024-04-26T12:22:30.599Z",
+                "hrTotalVehicleDistance": 23835630,
+                "snapshotData": {
+                    "gnssPosition": {
+                        "latitude": 51.4337652608618,
+                        "longitude": 5.5069031502134,
+                        "heading": 154,
+                        "altitude": 26,
+                        "speed": 0.0854317,
+                        "positionDateTime": "2024-04-26T12:18:23.000Z"
+                    },
+                    "wheelBasedSpeed": 0.0,
+                    "tachographSpeed": 0.0,
+                    "fuelType": "Diesel",
+                    "fuelLevel1": 18,
+                    "catalystFuelLevel": 36,
+                    "ambientAirTemperature": 13
+                },
+                "uptimeData": {
+                    "tellTaleInfo": [
+                        {
+                            "tellTale": "COOLING_AIR_CONDITIONING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HIGH_BEAM_MAIN_BEAM",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LOW_BEAM_DIPPED_BEAM",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TURN_SIGNALS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HAZARD_WARNING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PROVISIONING_HANDICAPPED_PERSON",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PARKING_BRAKE",
+                            "state": "INFO"
+                        },
+                        {
+                            "tellTale": "BRAKE_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HATCH_OPEN",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FUEL_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BATTERY_CHARGING_CONDITION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "POSITION_LIGHTS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FRONT_FOG_LIGHT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "REAR_FOG_LIGHT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PARKING_HEATER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_MIL_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SERVICE_CALL_FOR_MAINTENANCE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_FLUID_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ANTI_LOCK_BRAKE_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "WORN_BRAKE_LININGS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "WINDSCREEN_WASHER_FLUID",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TIRE_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "GENERAL_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STEERING_FLUID_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STEERING_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HEIGHT_CONTROL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RETARDER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_EMISSION_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BRAKE_LIGHTS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ARTICULATION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STOP_REQUEST",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PRAM_REQUEST",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BUS_STOP_BRAKE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ADBLUE_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RAISING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LOWERING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "KNEELING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COMPARTMENT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AUXILLARY_AIR_PRESSURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AIR_FILTER_CLOGGED",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FUEL_FILTER_DIFF_PRESSURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SEAT_BELT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "EBS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ADVANCED_EMERGENCY_BREAKING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ACC",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRAILER_CONNECTED",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ABS_TRAILER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AIRBAG",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "EBS_TRAILER_1_2",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TACHOGRAPH_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_SWITCHED_OFF",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_WARNING_SWITCHED_OFF",
+                            "state": "OFF"
+                        }
+                    ],
+                    "engineCoolantTemperature": 51,
+                    "serviceBrakeAirPressureCircuit1": 1032,
+                    "serviceBrakeAirPressureCircuit2": 1032
+                }
+            }
+        ]
+    },
+    "moreDataAvailable": false,
+    "requestServerDateTime": "2024-04-29T08:56:38.537Z"
+}</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>22</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Array of vehicle object.</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The vehicle status resource is used to get the status reports for one or several vehicles. </RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>{
+    "vehicleStatusResponse": {
+        "vehicleStatuses": [
+            {
+                "vin": "DCE32323111221",
+                "triggerType": {
+                    "triggerType": "TELL_TALE",
+                    "context": "RFMS",
+                    "tellTaleInfo": {
+                        "tellTale": "PARKING_BRAKE",
+                        "state": "INFO"
+                    }
+                },
+                "createdDateTime": "2024-04-18T05:56:32.000Z",
+                "receivedDateTime": "2024-04-18T05:59:39.949Z",
+                "hrTotalVehicleDistance": 14866905,
+                "snapshotData": {
+                    "gnssPosition": {
+                        "latitude": 51.4338023383898,
+                        "longitude": 5.50820314744339,
+                        "heading": 175,
+                        "altitude": 19,
+                        "speed": 0.0614661,
+                        "positionDateTime": "2024-04-18T05:56:31.000Z"
+                    },
+                    "wheelBasedSpeed": 0.0,
+                    "tachographSpeed": 0.0,
+                    "fuelType": "Diesel",
+                    "fuelLevel1": 8,
+                    "catalystFuelLevel": 91,
+                    "ambientAirTemperature": 4
+                },
+                "uptimeData": {
+                    "tellTaleInfo": [
+                        {
+                            "tellTale": "COOLING_AIR_CONDITIONING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HIGH_BEAM_MAIN_BEAM",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LOW_BEAM_DIPPED_BEAM",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TURN_SIGNALS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HAZARD_WARNING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PROVISIONING_HANDICAPPED_PERSON",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PARKING_BRAKE",
+                            "state": "INFO"
+                        },
+                        {
+                            "tellTale": "BRAKE_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HATCH_OPEN",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FUEL_LEVEL",
+                            "state": "YELLOW"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BATTERY_CHARGING_CONDITION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "POSITION_LIGHTS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FRONT_FOG_LIGHT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "REAR_FOG_LIGHT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PARKING_HEATER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_MIL_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SERVICE_CALL_FOR_MAINTENANCE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_FLUID_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ANTI_LOCK_BRAKE_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "WORN_BRAKE_LININGS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "WINDSCREEN_WASHER_FLUID",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TIRE_MALFUNCTION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "GENERAL_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STEERING_FLUID_LEVEL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STEERING_FAILURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "HEIGHT_CONTROL",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "RETARDER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_EMISSION_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "BRAKE_LIGHTS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ARTICULATION",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "STOP_REQUEST",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "PRAM_REQUEST",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "BUS_STOP_BRAKE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ADBLUE_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RAISING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LOWERING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "KNEELING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ENGINE_COMPARTMENT_TEMPERATURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AUXILLARY_AIR_PRESSURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AIR_FILTER_CLOGGED",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "FUEL_FILTER_DIFF_PRESSURE",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "SEAT_BELT",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "EBS",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ADVANCED_EMERGENCY_BREAKING",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ACC",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TRAILER_CONNECTED",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ABS_TRAILER",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "AIRBAG",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "EBS_TRAILER_1_2",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "TACHOGRAPH_INDICATOR",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "ESC_SWITCHED_OFF",
+                            "state": "NOT_AVAILABLE"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_WARNING_SWITCHED_OFF",
+                            "state": "NOT_AVAILABLE"
+                        }
+                    ],
+                    "engineCoolantTemperature": 22,
+                    "serviceBrakeAirPressureCircuit1": 1000,
+                    "serviceBrakeAirPressureCircuit2": 1000
+                }
+            },
+            {
+                "vin": "ABC12343243434S",
+                "triggerType": {
+                    "triggerType": "TELL_TALE",
+                    "context": "RFMS",
+                    "tellTaleInfo": {
+                        "tellTale": "PARKING_BRAKE",
+                        "state": "INFO"
+                    }
+                },
+                "createdDateTime": "2024-04-26T14:18:18.000Z",
+                "receivedDateTime": "2024-04-26T12:22:30.599Z",
+                "hrTotalVehicleDistance": 23835630,
+                "snapshotData": {
+                    "gnssPosition": {
+                        "latitude": 51.4337652608618,
+                        "longitude": 5.5069031502134,
+                        "heading": 154,
+                        "altitude": 26,
+                        "speed": 0.0854317,
+                        "positionDateTime": "2024-04-26T12:18:23.000Z"
+                    },
+                    "wheelBasedSpeed": 0.0,
+                    "tachographSpeed": 0.0,
+                    "fuelType": "Diesel",
+                    "fuelLevel1": 18,
+                    "catalystFuelLevel": 36,
+                    "ambientAirTemperature": 13
+                },
+                "uptimeData": {
+                    "tellTaleInfo": [
+                        {
+                            "tellTale": "COOLING_AIR_CONDITIONING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HIGH_BEAM_MAIN_BEAM",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LOW_BEAM_DIPPED_BEAM",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TURN_SIGNALS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HAZARD_WARNING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PROVISIONING_HANDICAPPED_PERSON",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PARKING_BRAKE",
+                            "state": "INFO"
+                        },
+                        {
+                            "tellTale": "BRAKE_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HATCH_OPEN",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FUEL_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BATTERY_CHARGING_CONDITION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "POSITION_LIGHTS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FRONT_FOG_LIGHT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "REAR_FOG_LIGHT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PARKING_HEATER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_MIL_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SERVICE_CALL_FOR_MAINTENANCE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_FLUID_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRANSMISSION_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ANTI_LOCK_BRAKE_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "WORN_BRAKE_LININGS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "WINDSCREEN_WASHER_FLUID",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TIRE_MALFUNCTION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "GENERAL_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_OIL_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COOLANT_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STEERING_FLUID_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STEERING_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "HEIGHT_CONTROL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RETARDER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_EMISSION_FAILURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BRAKE_LIGHTS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ARTICULATION",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "STOP_REQUEST",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "PRAM_REQUEST",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "BUS_STOP_BRAKE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ADBLUE_LEVEL",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "RAISING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LOWERING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "KNEELING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ENGINE_COMPARTMENT_TEMPERATURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AUXILLARY_AIR_PRESSURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AIR_FILTER_CLOGGED",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "FUEL_FILTER_DIFF_PRESSURE",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "SEAT_BELT",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "EBS",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ADVANCED_EMERGENCY_BREAKING",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ACC",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TRAILER_CONNECTED",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ABS_TRAILER",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "AIRBAG",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "EBS_TRAILER_1_2",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "TACHOGRAPH_INDICATOR",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "ESC_SWITCHED_OFF",
+                            "state": "OFF"
+                        },
+                        {
+                            "tellTale": "LANE_DEPARTURE_WARNING_SWITCHED_OFF",
+                            "state": "OFF"
+                        }
+                    ],
+                    "engineCoolantTemperature": 51,
+                    "serviceBrakeAirPressureCircuit1": 1032,
+                    "serviceBrakeAirPressureCircuit2": 1032
+                }
+            }
+        ]
+    },
+    "moreDataAvailable": false,
+    "requestServerDateTime": "2024-04-29T08:56:38.537Z"
+}</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>23</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 Unauthorized</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authenticated; the Bearer token is missing, invalid or expired.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>27</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 Forbidden</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authorised; the account does not have authorisation to use this functionality.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>28</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NotFound</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The requested resource could not be found.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>30</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NotFound</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The requested resource could not be found.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>31</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NotAcceptable</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>32</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TooManyRequests</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The user has sent too many requests in a given amount of time.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>34</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>200 OK</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>Bearer token with its type and expiration time</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>None</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE> 'access_token': "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTUwMDUzMjUsImlhdCI6IjE3MTUwMDM1MjUiLCJqdGkiOiIwMzEyNDc4ZS1kZTI5LTQzMmYtOWY5NS1iMWExMmE5Y2U3NjIiLCJpc3MiOiJodHRwOi8vMTAuMTIwLjEyOC4xNjEvcmVhbG1zL0RBRlN5c3RlbSIsInN1YiI6IjhlNGQxNmMxLWQ4NDgtNGI0Ni1iZDZmLTRhNjQwZDQ0NDA4YiIsInR5cCI6IkJlYXJlciIsImF6cCI6ImFkbWluLWNsaSIsInNlc3Npb25fc3RhdGUiOiIzZTNiOGQwMS0zODc4LTRmYjQtYjkwOS0yZDU5Zjc1YWEwMmQiLCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbCI6ImRlbml0c2FAZGFmdHJ1Y2tzLmNvbSIsIm5iZiI6MTcxNTAwMzUyNX0.koDTncS_aoZ6zJoQbH8265Bsj0RoIhqoOnDbsHHTUjUr3eLmLRQk-C1wzLrtIKuwSz7SQYDpOo1jyDX8wHo1UQdbNgStLADo4Qii1QdDbeyJZQ_s4ZWVFkp5MmqitPmgVO5kVwF1BRHiqnaG6zKcjdzFuSuk1nks-jYPG-YwPuZonRb-fEL5HnwEcAxD4gaUeAzBtxJ_oTnbzj1Yb0BXO7Tt7cB8RmDTDu4JpZQjas6BJhomG05zJT5RwcwfPjbpPtevs20dXcyQNZj4adjB5ZC4p0SQVRi6MNGDCJk4SvJOCfFG9iR9UiHwaFXhwkxsFjGRo4BjiqOu0ChMIC4jfhJLUGqeiZFvN50yQr9u3CFOxG13wi-MsPXvswjUrUVvYKQAvtW5VEa9NEBxcryhxs93afdqUrWVmOZSdQm4UO4r8q1afV3m5narW8dMxS67L9C4JBxsx_mepW9REOBMqpAZk6K5yHogstqAJvjzxvR1Ow2UY1H41o_iyj15nCaiRhYoAsKRvQiMuPySxOUwQ31QlYvqmRGmYd5PKFfTLlWSTBSyzKbKmgHHz7ffLhbo8pQvrEo7PuNJzqPUpyFrZZxSdoON6t8DZGnYjdAqQazcehDbdcgUBzCBX-Lbx69VRiu1OtfaiHnp-yv2Hu4rhEq-VrYLjopxCj_r_iQqWJw",
+    "expires_in": 1800,
+    "token_type": "Bearer"}</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>36</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 Bad Request</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The request contains bad syntax or cannot be fulfilled.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>24</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 Bad Request</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The request contains bad syntax or cannot be fulfilled.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>25</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 Unauthorized</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authenticated; the Bearer token is missing, invalid or expired.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>26</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 Forbidden</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authorised; the account does not have authorisation to use this functionality.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <RESPONSE_ID>29</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NotAcceptable</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>33</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TooManyRequests</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The user has sent too many requests in a given amount of time.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <RESPONSE_ID>35</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>403 Forbidden</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authorised; the account does not have authorisation to use this functionality.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>37</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>406 NotAcceptable</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The Accept header sent in the request does not conform to the rFMS standard.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>38</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>429 TooManyRequests</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The user has sent too many requests in a given amount of time.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>39</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>400 Bad Request</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The request contains bad syntax or cannot be fulfilled.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>40</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>401 Unauthorized</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>Not authenticated; the Bearer token is missing, invalid or expired.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>41</RESPONSE_ID>
+  </row>
+  <row>
+    <RESPONSE_PARAMETER_NAME>404 NotFound</RESPONSE_PARAMETER_NAME>
+    <RESPONSE_PARAMETER_TYPE>None</RESPONSE_PARAMETER_TYPE>
+    <RESPONSE_PARAMETER_DESCRIPTION>The requested resource could not be found.</RESPONSE_PARAMETER_DESCRIPTION>
+    <RESPONSE_PARAMETER_EXAMPLE>None</RESPONSE_PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <RESPONSE_ID>42</RESPONSE_ID>
+  </row>
+</data>

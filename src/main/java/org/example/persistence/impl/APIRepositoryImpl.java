@@ -3,6 +3,7 @@ package org.example.persistence.impl;
 import org.example.persistence.APIRepository;
 import org.example.persistence.entity.*;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.ResourceUtils;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -13,7 +14,9 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +39,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<APIEntity> apiEntities = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File(xmlFilePath));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList apiNodeList = rootElement.getElementsByTagName("row");
 
@@ -92,9 +98,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<LanguageEntity> languageEntities = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_LANGUAGES.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_LANGUAGES.xml"));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList responseNodeList = rootElement.getElementsByTagName("row");
 
@@ -129,9 +138,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<ErrorCodeEntity> errorCodeEntities = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_ERROR_CODES.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_ERROR_CODES.xml"));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList responseNodeList = rootElement.getElementsByTagName("row");
 
@@ -168,9 +180,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<RequestParametersEntity> requestParametersEntities = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_REQUEST_PARAMETERS.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_REQUEST_PARAMETERS.xml"));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList responseNodeList = rootElement.getElementsByTagName("row");
 
@@ -208,9 +223,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<ResponseParameterEntity> responseParameters = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_RESPONSE_PARAMETERS.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_RESPONSE_PARAMETERS.xml"));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList responseNodeList = rootElement.getElementsByTagName("row");
 
@@ -247,9 +265,12 @@ public class APIRepositoryImpl implements APIRepository {
         List<FeatureEntity> featureEntities = new ArrayList<>();
 
         try {
+            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_FEATURES.xml");
+
+            InputStream inputStream=new FileInputStream(file);
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_FEATURES.xml"));
+            Document document = builder.parse(inputStream);
             Element rootElement = document.getDocumentElement();
             NodeList responseNodeList = rootElement.getElementsByTagName("row");
 

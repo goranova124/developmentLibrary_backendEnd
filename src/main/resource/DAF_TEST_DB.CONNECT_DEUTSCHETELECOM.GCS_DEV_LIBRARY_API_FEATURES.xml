@@ -1,0 +1,1920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>vin</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>vehicle identification number. See ISO 3779 (17 characters)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>customerVehicleName</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The customer’s name for the vehicle.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>brand</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The vehicle brand.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>type</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The type of vehicle (e.g. Bus)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>model</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The model of the vehicle.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>productionDate</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Indicates when the vehicle was produced.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>authorizedPaths</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Paths that the client is authorized to call, e.g. /vehiclestatuses, /vehiclepositions</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>possibleFuelType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The possible fuel types supported by this vehicle, formatted as the hex id number according to SPN 5837.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>emissionLevel</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The emission level this vehicle supports</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>chassisType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The chassis type of the vehicle. This is used for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>1</RESPONSE_ID>
+    <FEATURE_NAME>noOfAxles</FEATURE_NAME>
+    <FEATURE_TYPE>int</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Number of axles on the vehicle. This is used for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>vin</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>vehicle identification number. See ISO 3779 (17 characters)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>triggerType</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS: TIMER, DRIVER_LOGIN, DRIVER_LOGOUT, IGNITION_ON, IGNITION_OFF, PTO_ENABLED, PTO_DISABLED, TELL_TALE, DISTANCE_TRAVELLED, ENGINE_ON, ENGINE_OFF, DRIVER_1_WORKING_STATE_CHANGED, DRIVER_2_WORKING_STATE_CHANGED, FUEL_TYPE_CHANGE, PARKING_BRAKE_SWITCH_CHANGE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>context</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The context defines if this is part of the standard or OEM specific. rFMS standard values VOLVO TRUCKS, SCANIA, DAIMLER, IVECO, DAF, MAN, RENAULT TRUCKS, VDL, VOLVO BUSES, IVECO BUS, IRISBUS If the Trigger is defined in the rFMS standard, the Context = RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>triggerInfo</FEATURE_NAME>
+    <FEATURE_TYPE>DriverIdObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Information for driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>driverId</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>driverId</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Driver information.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>ptoId</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The id of a PTO. This is only set if the TriggerType = PTO_ENABLED or PTO_DISABLED
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>tellTale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>What the tale type is</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>oemTellTale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The OemTellTale is only set when the TellTale == OEM_SPECIFIC_TELL_TALE. This is an OEM specific string defining a tell tale in the OEM context.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>state</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The current state of the tell tale.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>createdDateTime*	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>When the data was retrieved in the vehicle in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>receivedDateTime*	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Reception at Server. To be used for handling of "more data available" in iso8601 format.
+
+.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>gnssPosition	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of gnssPosition values</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>latitude</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>longitude</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>heading*	</FEATURE_NAME>
+    <FEATURE_TYPE>integer
+</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The direction of the vehicle (0-359)
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>altitude*	</FEATURE_NAME>
+    <FEATURE_TYPE>integer
+</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The altitude of the vehicle. Where 0 is sealevel, negative values below sealevel and positive above sealevel. Unit in meters.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>speed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The GNSS(e.g. GPS)-speed in km/h</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>positionDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time of the position data in iso8601 format.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>wheelBasedSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Wheel-Based Vehicle Speed in km/h (Speed of the vehicle as calculated from wheel or tailshaft speed)
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>tachographSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph vehicle speed in km/h (Speed of the vehicle registered by the tachograph)
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink	</FEATURE_NAME>
+    <FEATURE_TYPE>boolean</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>This will be set to true if the result set was too large to be sent back in one reply. A new request must be sent to get the rest of the vehicle positions, where the starttime parameter must be supplied. The starttime should be set to the latest ReceivedDateTime + 1 second of the last vehicle in the result set of this message.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Populated with the link to the next part of the result when moreDataAvailable is true. The link is relative, i.e. starts with /rfms/vehiclepositions, and preserves any query parameters from the original request.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>8</RESPONSE_ID>
+    <FEATURE_NAME>requestServerDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Time to be used to ask for historical data at customers (for starttime), to solve the problem of having different times at server and clients. This is the time at the server when this request was received. To avoid losing any messages or get duplicates, this is the time that should be supplied in the startTime parameter in the next request in iso8601 format.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>vin	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>vehicle identification number. See ISO 3779 (17 characters)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>triggerType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS: TIMER, DRIVER_LOGIN, DRIVER_LOGOUT, IGNITION_ON, IGNITION_OFF, PTO_ENABLED, PTO_DISABLED, TELL_TALE, DISTANCE_TRAVELLED, ENGINE_ON, ENGINE_OFF, DRIVER_1_WORKING_STATE_CHANGED, DRIVER_2_WORKING_STATE_CHANGED, FUEL_TYPE_CHANGE, PARKING_BRAKE_SWITCH_CHANGE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>context	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The context defines if this is part of the standard or OEM specific. rFMS standard values VOLVO TRUCKS, SCANIA, DAIMLER, IVECO, DAF, MAN, RENAULT TRUCKS, VDL, VOLVO BUSES, IVECO BUS, IRISBUS If the Trigger is defined in the rFMS standard, the Context = RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>triggerInfo	</FEATURE_NAME>
+    <FEATURE_TYPE>DriverIdObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Information for driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>driverId	</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification		</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>driverId	</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>oemTellTale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The OemTellTale is only set when the TellTale == OEM_SPECIFIC_TELL_TALE. This is an OEM specific string defining a tell tale in the OEM context.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>state	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The current state of the tell tale.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>createdDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>When the data was retrieved in the vehicle in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>receivedDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Reception at Server. To be used for handling of "more data available" in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>gnssPosition	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of gnssPosition values</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>latitude</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>longitude</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>heading</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The direction of the vehicle (0-359)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>altitude</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The altitude of the vehicle. Where 0 is sealevel, negative values below sealevel and positive above sealevel. Unit in meters.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>speed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The GNSS(e.g. GPS)-speed in km/h</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>positionDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time of the position data in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>wheelBasedSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Wheel-Based Vehicle Speed in km/h (Speed of the vehicle as calculated from wheel or tailshaft speed)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>tachographSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph vehicle speed in km/h (Speed of the vehicle registered by the tachograph)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink	</FEATURE_NAME>
+    <FEATURE_TYPE>boolean</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>This will be set to true if the result set was too large to be sent back in one reply. A new request must be sent to get the rest of the vehicle positions, where the starttime parameter must be supplied. The starttime should be set to the latest ReceivedDateTime + 1 second of the last vehicle in the result set of this message.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Populated with the link to the next part of the result when moreDataAvailable is true. The link is relative, i.e. starts with /rfms/vehiclepositions, and preserves any query parameters from the original request.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>15</RESPONSE_ID>
+    <FEATURE_NAME>requestServerDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Time to be used to ask for historical data at customers (for starttime), to solve the problem of having different times at server and clients. This is the time at the server when this request was received. To avoid losing any messages or get duplicates, this is the time that should be supplied in the startTime parameter in the next request in iso8601 format.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>36</RESPONSE_ID>
+    <FEATURE_NAME>bearerToken</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>JWT formatted token</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>36</RESPONSE_ID>
+    <FEATURE_NAME>tokenType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Shall be "Bearer"</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>36</RESPONSE_ID>
+    <FEATURE_NAME>expiresIn</FEATURE_NAME>
+    <FEATURE_TYPE>int</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Shall be the lifetime in seconds for the access token</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>vin	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>vehicle identification number. See ISO 3779 (17 characters)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>triggerType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS: TIMER, DRIVER_LOGIN, DRIVER_LOGOUT, IGNITION_ON, IGNITION_OFF, PTO_ENABLED, PTO_DISABLED, TELL_TALE, DISTANCE_TRAVELLED, ENGINE_ON, ENGINE_OFF, DRIVER_1_WORKING_STATE_CHANGED, DRIVER_2_WORKING_STATE_CHANGED, FUEL_TYPE_CHANGE, PARKING_BRAKE_SWITCH_CHANGE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>context	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The context defines if this is part of the standard or OEM specific. rFMS standard values VOLVO TRUCKS, SCANIA, DAIMLER, IVECO, DAF, MAN, RENAULT TRUCKS, VDL, VOLVO BUSES, IVECO BUS, IRISBUS If the Trigger is defined in the rFMS standard, the Context = RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>triggerInfo	</FEATURE_NAME>
+    <FEATURE_TYPE>DriverIdObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Information for driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driverId	</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification		</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>ptoId</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The id of a PTO. This is only set if the TriggerType = PTO_ENABLED or PTO_DISABLED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>telltale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>type of telltale</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>oemTellTale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The OemTellTale is only set when the TellTale == OEM_SPECIFIC_TELL_TALE. This is an OEM specific string defining a tell tale in the OEM context.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>state	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The current state of the tell tale.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>createdDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>When the data was retrieved in the vehicle in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>receivedDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Reception at Server. To be used for handling of "more data available" in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>hrTotalVehicleDistance</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Accumulated distance travelled by the vehicle during its operation in meter</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>totalEngineHours</FEATURE_NAME>
+    <FEATURE_TYPE>double</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total hours of operation for the vehicle engine.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driver1Id</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification		</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>grossCombinationVehicleWeight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The full vehicle weight in kg</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineTotalFuelUsed</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total fuel the vehicle has used during its lifetime in MilliLitres. Either engineTotalFuelUsed or totalFuelUsedGaseous is mandatory.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>totalFuelUsedGaseous</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Total fuel consumed in kg (trip drive fuel + trip PTO governor moving fuel + trip PTO governor non-moving fuel + trip idle fuel) over the life of the engine. Either engineTotalFuelUsed or totalFuelUsedGaseous is mandatory.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>status2OfDoors</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Bus specific parameter</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>doorStatus</FEATURE_NAME>
+    <FEATURE_TYPE>Object</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameters for doors</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>DoorEnabledStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is enabled, example: ENABLED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>DoorOpenStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is open, example: CLOSED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>DoorLockStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is locked, example: UNLOCKED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>DoorNumber</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter for door, example: 1</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>accumulatedData</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of objects with features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been over zero.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>distanceCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The distance the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelConsumptionDuringCruiseActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active. Unit in millilitres</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been over zero. Engine on (RPM&gt;0)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>ptoActiveClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Labels WHEELBASED_SPEED_OVER_ZERO, WHEELBASED_SPEED_ZERO at least one PTO on during wheelbased speed =0 counter in seconds and millilitres at least one PTO on during wheelbased speed&gt;0 counter in seconds, millilitres (includes consumption of driving) and meter driven</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>label</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>seconds</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>meters</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>milliLitres</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>accumulatedData</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of objects with features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been over zero.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>distanceCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The distance the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelConsumptionDuringCruiseActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active. Unit in millilitres</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been over zero. Engine on (RPM&gt;0)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>ptoActiveClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Labels WHEELBASED_SPEED_OVER_ZERO, WHEELBASED_SPEED_ZERO at least one PTO on during wheelbased speed =0 counter in seconds and millilitres at least one PTO on during wheelbased speed&gt;0 counter in seconds, millilitres (includes consumption of driving) and meter driven</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>label</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>seconds</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>meters</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>milliLitres</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>brakePedalCounterSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the brake pedal has been used while the vehicle was driving.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>distanceBrakePedalActiveSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total distance the vehicle has driven where the brake pedal has been used. Unit Meters..</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>accelerationPedalPositionClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent. Minimum 5 classes [0, 20[ [20, 40[ [40, 60[ [60, 80[ [80, 100].</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>brakePedalPositionClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent. Minimum 5 classes [0, 20[ [20, 40[ [40, 60[ [60, 80[ [80, 100].</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>accelerationClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In m/s2 Minimum 13 classes..</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>highAccelerationClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In m/s2 Minimum 11 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>retarderTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent (how the retarder is used as a positive value). Minimum 5 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>drivingWithoutTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of seconds/meters used while driving without torque. With gear (clutch is engaged) Labels DRIVING_WITHOUT_TORQUE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC1 value (Actual Engine-Percent Torque). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineTorqueAtCurrentSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC2 value (Engine Percent Load At Current Speed). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>vehicleSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC1 value (Actual Engine-Percent Torque). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In RPM Minimum 10 classes.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>selectedGearClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The currently selected gear One class per gear. Neutral is also a gear. Park is also a gear. This is formatted according to SPN 524, supplied as a decimal value. Example 0 = Neutral, 1 = 1:st gear... This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>currentGearClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The currently used gear One class per gear. Neutral is also a gear. Park is also a gear. This is formatted according to SPN 523, supplied as a decimal value. Example 0 = Neutral, 1 = 1:st gear... This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>chairliftCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the chairlift has been outside the bus. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>stopRequestCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of stop requests made. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>kneelingCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the bus has knelt.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>pramRequestCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of pram requests made. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>snapshotData	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>gnssPosition	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of gnssPosition values</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>latitude</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>longitude</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>heading</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The direction of the vehicle (0-359)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>altitude</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The altitude of the vehicle. Where 0 is sealevel, negative values below sealevel and positive above sealevel. Unit in meters.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>speed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The GNSS(e.g. GPS)-speed in km/h</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>positionDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time of the position data in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>wheelBasedSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Wheel-Based Vehicle Speed in km/h (Speed of the vehicle as calculated from wheel or tailshaft speed)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>2</RESPONSE_ID>
+    <FEATURE_NAME>tachographSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph vehicle speed in km/h (Speed of the vehicle registered by the tachograph)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The engine speed in rev/min</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelType</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Type of fuel currently being utilized by the vehicle acc. SPN 5837</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel1</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel2</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Ratio of volume of fuel to the total volume of fuel storage container, in percent. When Fuel Level 2 is not used, Fuel Level 1 represents the total fuel in all fuel storage containers. When Fuel Level 2 is used, Fuel Level 1 represents the fuel level in the primary or left-side fuel storage container.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>catalystFuelLevel</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The adblue level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel1</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driver1WorkingState</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph Working state of the driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driver2Id</FEATURE_NAME>
+    <FEATURE_TYPE>list</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List  of driver2 data</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>driver2WorkingState</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph Working state of the driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>ambientAirTemperature</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The Ambient air temperature in Celsius</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>parkingBrakeSwitch</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Switch signal which indicates when the parking brake is set.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>hybridBatteryPackRemainingCharge</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Indicates the hybrid battery pack remaining charge. 0% means no charge remaining, 100% means full charge remaining.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>uptimeData	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>serviceDistance</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The distance in meter to the next service.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>engineCoolantTemperature</FEATURE_NAME>
+    <FEATURE_TYPE>double</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The temperature of the coolant liquid in Celsius</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>serviceBrakeAirPressureCircuit1</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The air pressure in circuit 1 in Pascal.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>serviceBrakeAirPressureCircuit2</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The air pressure in circuit 2 in Pascal.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>durationAtLeastOneDoorOpen</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total time at least one door has been opened in the bus. (seconds) Used mainly for buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>alternatorInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The alternator status of the up to 4 alternators. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>alternatorStatus</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Status.Example: CHARGING</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureFrontAxleLeft</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the front axle left side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureFrontAxleRight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the front axle right side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureRearAxleLeft</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the rear axle left side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureRearAxleRight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the rear axle right side in Pascal. Used mainly for buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailable</FEATURE_NAME>
+    <FEATURE_TYPE>boolean</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>This will be set to true if the result set was too large to be sent back in one reply. A new request must be sent to get the rest of the vehicle positions, where the starttime parameter must be supplied. The starttime should be set to the latest ReceivedDateTime + 1 second of the last vehicle in the result set of this message.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Populated with the link to the next part of the result when moreDataAvailable is true. The link is relative, i.e. starts with /rfms/vehiclepositions, and preserves any query parameters from the original request.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>22</RESPONSE_ID>
+    <FEATURE_NAME>requestServerDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Time to be used to ask for historical data at customers (for starttime), to solve the problem of having different times at server and clients. This is the time at the server when this request was received. To avoid losing any messages or get duplicates, this is the time that should be supplied in the startTime parameter in the next request in iso8601 format.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>vin	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>vehicle identification number. See ISO 3779 (17 characters)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>triggerType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS: TIMER, DRIVER_LOGIN, DRIVER_LOGOUT, IGNITION_ON, IGNITION_OFF, PTO_ENABLED, PTO_DISABLED, TELL_TALE, DISTANCE_TRAVELLED, ENGINE_ON, ENGINE_OFF, DRIVER_1_WORKING_STATE_CHANGED, DRIVER_2_WORKING_STATE_CHANGED, FUEL_TYPE_CHANGE, PARKING_BRAKE_SWITCH_CHANGE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>context	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The context defines if this is part of the standard or OEM specific. rFMS standard values VOLVO TRUCKS, SCANIA, DAIMLER, IVECO, DAF, MAN, RENAULT TRUCKS, VDL, VOLVO BUSES, IVECO BUS, IRISBUS If the Trigger is defined in the rFMS standard, the Context = RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>triggerInfo	</FEATURE_NAME>
+    <FEATURE_TYPE>DriverIdObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Information for driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driverId	</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification		</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>ptoId</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The id of a PTO. This is only set if the TriggerType = PTO_ENABLED or PTO_DISABLED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>telltale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>type of telltale</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemTellTale</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The OemTellTale is only set when the TellTale == OEM_SPECIFIC_TELL_TALE. This is an OEM specific string defining a tell tale in the OEM context.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>state	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The current state of the tell tale.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>createdDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>When the data was retrieved in the vehicle in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>receivedDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Reception at Server. To be used for handling of "more data available" in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>hrTotalVehicleDistance</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Accumulated distance travelled by the vehicle during its operation in meter</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>totalEngineHours</FEATURE_NAME>
+    <FEATURE_TYPE>double</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total hours of operation for the vehicle engine.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driver1Id</FEATURE_NAME>
+    <FEATURE_TYPE>TriggerObject</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Trigger types for Context=RFMS</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driverIdentification		</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The unique identification of a driver in a Member State.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardIssuingMemberState	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The country alpha code of the Member State having issued the card.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driverAuthenticationEquipment	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Code to distinguish different types of equipment for the tachograph application.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardReplacementIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card replacement index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>cardRenewalIndex	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>A card renewal index.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification	</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>idType</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains an optional id type (e.g. pin, USB, encrypted EU id...).
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>oemDriverIdentification</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>An OEM specific driver id.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>grossCombinationVehicleWeight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The full vehicle weight in kg</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>grossCombinationVehicleWeight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The full vehicle weight in kg</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineTotalFuelUsed</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total fuel the vehicle has used during its lifetime in MilliLitres. Either engineTotalFuelUsed or totalFuelUsedGaseous is mandatory.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>totalFuelUsedGaseous</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Total fuel consumed in kg (trip drive fuel + trip PTO governor moving fuel + trip PTO governor non-moving fuel + trip idle fuel) over the life of the engine. Either engineTotalFuelUsed or totalFuelUsedGaseous is mandatory.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>status2OfDoors</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Bus specific parameter</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>doorStatus</FEATURE_NAME>
+    <FEATURE_TYPE>Object</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameters for doors</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>DoorEnabledStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is enabled, example: ENABLED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>DoorOpenStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is open, example: CLOSED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>DoorLockStatus</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter if door is locked, example: UNLOCKED</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>DoorNumber</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Parameter for door, example: 1</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>accumulatedData</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of objects with features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been over zero.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>distanceCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The distance the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>durationCruiseControlActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle has been driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelConsumptionDuringCruiseActive</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while driven with cruise control active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>durationWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been equal to zero. Engine on (RPM&gt;0) and no PTO active. Unit in millilitres</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelWheelbaseSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel consumption the vehicle has consumed while the vehicle speed has been over zero. Engine on (RPM&gt;0)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>ptoActiveClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Labels WHEELBASED_SPEED_OVER_ZERO, WHEELBASED_SPEED_ZERO at least one PTO on during wheelbased speed =0 counter in seconds and millilitres at least one PTO on during wheelbased speed&gt;0 counter in seconds, millilitres (includes consumption of driving) and meter driven</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>label</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>seconds</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>meters</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>milliLitres</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION></FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>brakePedalCounterSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the brake pedal has been used while the vehicle was driving.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>distanceBrakePedalActiveSpeedOverZero</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total distance the vehicle has driven where the brake pedal has been used. Unit Meters..</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>accelerationPedalPositionClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent. Minimum 5 classes [0, 20[ [20, 40[ [40, 60[ [60, 80[ [80, 100].</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>brakePedalPositionClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent. Minimum 5 classes [0, 20[ [20, 40[ [40, 60[ [60, 80[ [80, 100].</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>accelerationClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In m/s2 Minimum 13 classes..</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>highAccelerationClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In m/s2 Minimum 11 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>retarderTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent (how the retarder is used as a positive value). Minimum 5 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>drivingWithoutTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of seconds/meters used while driving without torque. With gear (clutch is engaged) Labels DRIVING_WITHOUT_TORQUE</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineTorqueClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC1 value (Actual Engine-Percent Torque). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineTorqueAtCurrentSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC2 value (Engine Percent Load At Current Speed). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>vehicleSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In percent based on EEC1 value (Actual Engine-Percent Torque). Minimum 10 classes</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineSpeedClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>In RPM Minimum 10 classes.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>selectedGearClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The currently selected gear One class per gear. Neutral is also a gear. Park is also a gear. This is formatted according to SPN 524, supplied as a decimal value. Example 0 = Neutral, 1 = 1:st gear... This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>currentGearClass</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The currently used gear One class per gear. Neutral is also a gear. Park is also a gear. This is formatted according to SPN 523, supplied as a decimal value. Example 0 = Neutral, 1 = 1:st gear... This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>chairliftCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the chairlift has been outside the bus. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>stopRequestCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of stop requests made. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>kneelingCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of times the bus has knelt.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>pramRequestCounter</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total number of pram requests made. This is mainly used for Buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>snapshotData	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>gnssPosition	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of gnssPosition values</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>latitude</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>longitude</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Longitude (WGS84 based)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>heading</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The direction of the vehicle (0-359)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>altitude</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The altitude of the vehicle. Where 0 is sealevel, negative values below sealevel and positive above sealevel. Unit in meters.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>speed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The GNSS(e.g. GPS)-speed in km/h</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>positionDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The time of the position data in iso8601 format.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>wheelBasedSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Wheel-Based Vehicle Speed in km/h (Speed of the vehicle as calculated from wheel or tailshaft speed)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>2</RESPONSE_ID>
+    <FEATURE_NAME>tachographSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph vehicle speed in km/h (Speed of the vehicle registered by the tachograph)</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineSpeed</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The engine speed in rev/min</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelType</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Type of fuel currently being utilized by the vehicle acc. SPN 5837</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel1</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel2</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Ratio of volume of fuel to the total volume of fuel storage container, in percent. When Fuel Level 2 is not used, Fuel Level 1 represents the total fuel in all fuel storage containers. When Fuel Level 2 is used, Fuel Level 1 represents the fuel level in the primary or left-side fuel storage container.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>catalystFuelLevel</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The adblue level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>fuelLevel1</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The fuel level percentage</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driver1WorkingState</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph Working state of the driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driver2Id</FEATURE_NAME>
+    <FEATURE_TYPE>list</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List  of driver2 data</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>driver2WorkingState</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Tachograph Working state of the driver</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>ambientAirTemperature</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The Ambient air temperature in Celsius</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>parkingBrakeSwitch</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Switch signal which indicates when the parking brake is set.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>hybridBatteryPackRemainingCharge</FEATURE_NAME>
+    <FEATURE_TYPE>number</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Indicates the hybrid battery pack remaining charge. 0% means no charge remaining, 100% means full charge remaining.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>uptimeData	</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>List of features</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>tellTaleInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Contains information for tales.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>serviceDistance</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The distance in meter to the next service.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>engineCoolantTemperature</FEATURE_NAME>
+    <FEATURE_TYPE>double</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The temperature of the coolant liquid in Celsius</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>serviceBrakeAirPressureCircuit1</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The air pressure in circuit 1 in Pascal.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>serviceBrakeAirPressureCircuit2</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The air pressure in circuit 2 in Pascal.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>durationAtLeastOneDoorOpen</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The total time at least one door has been opened in the bus. (seconds) Used mainly for buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>alternatorInfo</FEATURE_NAME>
+    <FEATURE_TYPE>List</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The alternator status of the up to 4 alternators. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>alternatorStatus</FEATURE_NAME>
+    <FEATURE_TYPE>String</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Status.Example: CHARGING</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureFrontAxleLeft</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the front axle left side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureFrontAxleRight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the front axle right side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureRearAxleLeft</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the rear axle left side in Pascal. Used mainly for buses.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>bellowPressureRearAxleRight</FEATURE_NAME>
+    <FEATURE_TYPE>integer</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>The bellow pressure in the rear axle right side in Pascal. Used mainly for buses</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailable</FEATURE_NAME>
+    <FEATURE_TYPE>boolean</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>This will be set to true if the result set was too large to be sent back in one reply. A new request must be sent to get the rest of the vehicle positions, where the starttime parameter must be supplied. The starttime should be set to the latest ReceivedDateTime + 1 second of the last vehicle in the result set of this message.</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>moreDataAvailableLink</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Populated with the link to the next part of the result when moreDataAvailable is true. The link is relative, i.e. starts with /rfms/vehiclepositions, and preserves any query parameters from the original request.
+
+</FEATURE_DESCRIPTION>
+  </row>
+  <row>
+    <RESPONSE_ID>23</RESPONSE_ID>
+    <FEATURE_NAME>requestServerDateTime</FEATURE_NAME>
+    <FEATURE_TYPE>string</FEATURE_TYPE>
+    <FEATURE_DESCRIPTION>Time to be used to ask for historical data at customers (for starttime), to solve the problem of having different times at server and clients. This is the time at the server when this request was received. To avoid losing any messages or get duplicates, this is the time that should be supplied in the startTime parameter in the next request in iso8601 format.
+
+</FEATURE_DESCRIPTION>
+  </row>
+</data>

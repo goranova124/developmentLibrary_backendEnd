@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <PARAMETER_NAME>Content-Type</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>The type of content</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/json</PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Accept</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Indicates which content type the user is able to accept</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/vnd.fmsstandard.com.vehicles.v3.0+json; UTF-8
+</PARAMETER_EXAMPLE>
+    <API_ID>1</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Accept</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Indicates which content type the user is able to accept</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/vnd.fmsstandard.com.vehiclepositions.v3.0+json; UTF-8</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>triggerFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that was triggered by the trigger defined by the filter</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>TIMER</PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>triggerFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that was triggered by the trigger defined by the filter</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>TIMER</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>vin</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Only the data created by the vehicle with this VIN should be returned
+
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ABC12345678901234</PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>vin</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Only the data created by the vehicle with this VIN should be returned
+
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ABC12345678901234</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>stoptime</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Time is in zone UTC. Only the data created/received at or after this time should be returned. (i.e. >= starttime)</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>2024-04-19T12:57:18.389Z</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Accept</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Indicates which content type the user is able to accept</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/vnd.fmsstandard.com.vehiclepositions.v3.0+json; UTF-8</PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Email</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Your email</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>myname@example.come</PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Password</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Your password</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>mySecurePassword321123</PARAMETER_EXAMPLE>
+    <API_ID>4</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>dateType</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>The start/stop times are compared to the created or received time of the position reports. If this is not supplied all times are received times.</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>received</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>dateType</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>The start/stop times are compared to the created or received time of the position reports. If this is not supplied all times are received times.</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>received</PARAMETER_EXAMPLE>
+    <API_ID>3</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>dateType</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>The start/stop times are compared to the created or received time of the position reports. If this is not supplied all times are received times.</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>received</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>dateType</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>The start/stop times are compared to the created or received time of the position reports. If this is not supplied all times are received times.</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>received</PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>starttime</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Time is in zone UTC. Only the data created/received at or after this time should be returned. (i.e. >= starttime)</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>2024-04-19T12:57:18.389Z</PARAMETER_EXAMPLE>
+    <API_ID>2</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>starttime</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Time is in zone UTC. Only the data created/received at or after this time should be returned. (i.e. >= starttime)</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>2024-04-19T12:57:18.389Z</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>stoptime</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Time is in zone UTC. Only the data created/received at or after this time should be returned. (i.e. >= starttime)</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>2024-04-19T12:57:18.389Z</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>vin</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Only the data created by the vehicle with this VIN should be returned
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ABC12345678901234</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>vin</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Only the data created by the vehicle with this VIN should be returned
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ABC12345678901234</PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>contentFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that contain information in the area defined by the filters.
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ACCUMULATED</PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>contentFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that contain information in the area defined by the filters.
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>ACCUMULATED</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>triggerFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that was triggered by the trigger defined by the filter
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>TIMER</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>triggerFilter</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Will only return data reports that was triggered by the trigger defined by the filter
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>TIMER</PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <PARAMETER_REQUIRED>False</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Accept</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Indicates which content type the user is able to accept
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/vnd.fmsstandard.com.vehiclestatuses.v3.0+json; UTF-8</PARAMETER_EXAMPLE>
+    <API_ID>6</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+  <row>
+    <PARAMETER_NAME>Accept</PARAMETER_NAME>
+    <PARAMETER_TYPE>String</PARAMETER_TYPE>
+    <PARAMETER_DESCRIPTION>Indicates which content type the user is able to accept
+</PARAMETER_DESCRIPTION>
+    <PARAMETER_EXAMPLE>application/vnd.fmsstandard.com.vehiclestatuses.v3.0+json; UTF-8</PARAMETER_EXAMPLE>
+    <API_ID>5</API_ID>
+    <PARAMETER_REQUIRED>True</PARAMETER_REQUIRED>
+  </row>
+</data>

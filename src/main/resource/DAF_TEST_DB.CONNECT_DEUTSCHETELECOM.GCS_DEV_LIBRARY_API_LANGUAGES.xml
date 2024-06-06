@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <ID>1</ID>
+    <EXAMPLE>HttpClient client = new HttpClient(); string url = "https://api.connect.daf.com/rfms/vehicles"; client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", "{token}"); HttpResponseMessage response = await client.GetAsync(url); string responseBody = await response.Content.ReadAsStringAsync(); Console.WriteLine(responseBody);</EXAMPLE>
+    <API_ID>1</API_ID>
+    <LANGUAGE>C# - HttpClient</LANGUAGE>
+  </row>
+  <row>
+    <ID>2</ID>
+    <EXAMPLE>auth_URL="https://api.connect.daf.com/rfms/token"
+creds="username:password"
+base64_message=$(echo -n "$creds" | base64)
+
+curl -X POST -H "Authorization: Basic $base64_message" "$auth_URL" -k
+</EXAMPLE>
+    <API_ID>4</API_ID>
+    <LANGUAGE>curl</LANGUAGE>
+  </row>
+  <row>
+    <ID>3</ID>
+    <EXAMPLE>using System;
+using System.Net.Http;
+using System.Text;
+using System.Text.Json;
+
+string auth_URL = "https://api.connect.daf.com/rfms/token";
+string creds = username + ":" + password;
+byte[] credsBytes = Encoding.ASCII.GetBytes(creds);
+string base64Message = Convert.ToBase64String(credsBytes);
+string authorizationHeader = "Basic " + base64Message;
+
+HttpClient client = new HttpClient();
+
+HttpRequestMessage request = new HttpRequestMessage
+{
+    Method = HttpMethod.Post,
+    RequestUri = new Uri(auth_URL)
+};
+request.Headers.Add("Authorization", authorizationHeader);
+
+HttpResponseMessage response = await client.SendAsync(request);
+string responseBody = await response.Content.ReadAsStringAsync();
+
+JsonDocument jsondata = JsonDocument.Parse(responseBody);
+string token = jsondata.RootElement.GetProperty("access_token").GetString();
+
+</EXAMPLE>
+    <API_ID>4</API_ID>
+    <LANGUAGE>C#</LANGUAGE>
+  </row>
+  <row>
+    <ID>4</ID>
+    <EXAMPLE>
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
+
+public class Main {
+    public static void main(String[] args) {
+        String authURL = "https://api.connect.daf.com/rfms/token";
+        String creds = "username:password";
+        String base64Message = Base64.getEncoder().encodeToString(creds.getBytes(StandardCharsets.UTF_8));
+        String authorizationHeader = "Basic " + base64Message;
+
+        try {
+            URL url = new URL(authURL);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Authorization", authorizationHeader);
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) {
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                String inputLine;
+                StringBuilder response = new StringBuilder();
+
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+                in.close();
+
+                String responseBody = response.toString();
+            } else {
+                System.out.println("Request Failed. Response Code: " + responseCode);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</EXAMPLE>
+    <API_ID>4</API_ID>
+    <LANGUAGE>java</LANGUAGE>
+  </row>
+  <row>
+    <ID>5</ID>
+    <EXAMPLE>
+const auth_URL = 'https://api.connect.daf.com/rfms/token';
+
+const creds = username + ':' + password;
+const base64_message = btoa(creds);
+const headers = {
+    'Authorization': 'Basic' + base64_message
+};
+
+fetch(auth_URL, {
+    method: 'POST',
+    headers: headers,
+    body: ''
+})
+.then(response => response.json())
+.then(jsondata => {
+    const token = jsondata.access_token;
+    // Use the token as needed
+})
+.catch(error => {
+    console.error(error);
+});
+</EXAMPLE>
+    <API_ID>4</API_ID>
+    <LANGUAGE>JavaScript</LANGUAGE>
+  </row>
+  <row>
+    <ID>6</ID>
+    <EXAMPLE>
+import base64
+import requests
+
+auth_URL = 'https://api.connect.daf.com/rfms/token'
+
+creds = username + ':' + password
+creds_bytes = creds.encode('ascii')
+base64_bytes = base64.b64encode(creds_bytes)
+base64_message = base64_bytes.decode('ascii')
+headers = {
+    'Authorization': 'Basic ' + base64_message
+}
+
+r = requests.post(auth_URL, headers=headers, verify=False)
+jsondata = r.json()
+token = jsondata.get('access_token')
+</EXAMPLE>
+    <API_ID>4</API_ID>
+    <LANGUAGE>Python</LANGUAGE>
+  </row>
+</data>

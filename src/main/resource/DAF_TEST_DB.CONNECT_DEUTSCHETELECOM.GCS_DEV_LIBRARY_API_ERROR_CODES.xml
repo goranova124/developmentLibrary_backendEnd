@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a list of vehicles matching the filter parameters supplied in the request. If there are no vehicles in the account an empty list will be returned</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>1</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>400 Bad Request</ERROR_CODE>
+    <ERROR_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Mandatory field missing, e.g. Authentication Header</POSSIBLE_REASON>
+    <ID>2</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>3</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>5</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>4</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>6</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Request sent too often and/or Max concurrent calls</POSSIBLE_REASON>
+    <ID>7</ID>
+    <API_ID>1</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a list of vehicles poistions matching the filter parameters supplied in the request.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>8</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>400 Bad Request</ERROR_CODE>
+    <ERROR_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Mandatory field missing, e.g. Authentication Header</POSSIBLE_REASON>
+    <ID>9</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>10</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>11</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>12</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>13</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Request sent too often and/or Max concurrent calls</POSSIBLE_REASON>
+    <ID>14</ID>
+    <API_ID>2</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a list of vehicles poistions matching the filter parameters supplied in the request.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>15</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>400 Bad Request</ERROR_CODE>
+    <ERROR_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Mandatory field missing, e.g. Authentication Header</POSSIBLE_REASON>
+    <ID>16</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>17</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>18</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>19</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>20</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes..</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Request sent too often and/or Max concurrent calls</POSSIBLE_REASON>
+    <ID>21</ID>
+    <API_ID>3</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a list of vehicles matching the filter parameters supplied in the request. If there are no vehicles in the account an empty list will be returned</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>22</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a list of vehicles matching the filter parameters supplied in the request. If there are no vehicles in the account an empty list will be returned</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>23</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided, Not authenticated; the Bearer token is missing, invalid or expired.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>24</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided, Not authenticated; the Bearer token is missing, invalid or expired.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>25</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>26</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>27</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>28</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>29</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>30</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>31</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>The user has sent too many requests in a given amount of time.</POSSIBLE_REASON>
+    <ID>32</ID>
+    <API_ID>5</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>The user has sent too many requests in a given amount of time.</POSSIBLE_REASON>
+    <ID>33</ID>
+    <API_ID>6</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>200 OK</ERROR_CODE>
+    <ERROR_DESCRIPTION>It will contain a response with the token, its type and expiration time.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>None</POSSIBLE_REASON>
+    <ID>34</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>400 Bad Request</ERROR_CODE>
+    <ERROR_DESCRIPTION>The server cannot or will not process the request due to an apparent client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Mandatory field missing, e.g. Authentication Header</POSSIBLE_REASON>
+    <ID>35</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>401 Unauthorized</ERROR_CODE>
+    <ERROR_DESCRIPTION>When authentication is required and has failed or has not yet been provided.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Login credentials expired and/or Access token not valid orexpired</POSSIBLE_REASON>
+    <ID>36</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>403 Forbidden</ERROR_CODE>
+    <ERROR_DESCRIPTION>The request was a valid request, but the server is refusing to respond to it.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Wrong credentials, Insufficient rights for the service, no rights on any service of this vehicle and/or Response is too large</POSSIBLE_REASON>
+    <ID>37</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>404 NotFound</ERROR_CODE>
+    <ERROR_DESCRIPTION>The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Vehicle unknown and/or rFMS-Version not supported</POSSIBLE_REASON>
+    <ID>38</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>406 NotAcceptable</ERROR_CODE>
+    <ERROR_DESCRIPTION>The client has requested a response using Accept- headers that the server cannot fulfill.</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Unsupported Accept parameter sent</POSSIBLE_REASON>
+    <ID>39</ID>
+    <API_ID>4</API_ID>
+  </row>
+  <row>
+    <ERROR_CODE>429 TooManyRequests</ERROR_CODE>
+    <ERROR_DESCRIPTION>The user has sent too many requests in a given amount of time. Intended for use with rate limiting schemes..</ERROR_DESCRIPTION>
+    <POSSIBLE_REASON>Request sent too often and/or Max concurrent calls</POSSIBLE_REASON>
+    <ID>40</ID>
+    <API_ID>4</API_ID>
+  </row>
+</data>
