@@ -19,6 +19,7 @@ dependencies {
     runtimeOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.h2database:h2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.security:spring-security-test")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     testImplementation("junit:junit:4.13.1")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
@@ -35,7 +36,6 @@ tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
 tasks.jacocoTestReport {
-    println("dwdwdw")
     dependsOn(tasks.test)
             classDirectories.setFrom(
                     files(classDirectories.files.map {
@@ -44,7 +44,8 @@ tasks.jacocoTestReport {
                                     "com/baeldung//ExcludedPOJO.class",
                                     "com/baeldung//DTO.",
                                     "**/config/*",
-                                    "**/generated/**"
+                                    "**/generated/**",
+                                    "**/org/example/persistence",
 
                             )
                         }

@@ -2,20 +2,16 @@ package org.example.business.impl;
 
 import org.example.business.GetVehiclePositionByStartTimeOnlyUseCase;
 import org.example.domain.GetVehiclePositionResponse;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.ClientResponse;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 
 @Service
 
 public class GetVehiclePositionByStartTimeOnlyUseCseImpl implements GetVehiclePositionByStartTimeOnlyUseCase {
-    private static final Logger logger = LoggerFactory.getLogger(GetVehiclePositionByStartTimeOnlyUseCseImpl.class);
 
 
     @Override
@@ -52,14 +48,12 @@ public class GetVehiclePositionByStartTimeOnlyUseCseImpl implements GetVehiclePo
         if (clientResponse != null) {
             HttpStatus statusCode = clientResponse.statusCode();
             if (statusCode.isError()) {
-                logger.error("Failed to login. Status code: {}", statusCode);
                 return ResponseEntity.status(statusCode).body(null);
             } else {
                 GetVehiclePositionResponse body = clientResponse.bodyToMono(GetVehiclePositionResponse.class).block();
                 return ResponseEntity.status(statusCode).body(body);
             }
         } else {
-            logger.error("Failed to receive response from external API");
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
