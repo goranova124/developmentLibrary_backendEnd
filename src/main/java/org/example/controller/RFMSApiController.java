@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin(origins = "https://goranova124.github.io/", allowedHeaders = "*")
+@CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/", allowedHeaders = "*")
 @RequestMapping("/vehicles")
 @AllArgsConstructor
 public class RFMSApiController {
@@ -22,7 +22,7 @@ public class RFMSApiController {
     private final GetVehicleStatusByStarttimeOnlyUseCase getVehicleStatusByStarttimeOnlyUseCase;
     private final GetMoreDataUseCase getMoreDataUseCase;
 
-    @CrossOrigin(origins = "https://goranova124.github.io/")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping
     public ResponseEntity<GetVehicleResponse> getVehicles(@RequestHeader("Authorization") String authorization,
                                                 @RequestHeader("Accept") String accept,
@@ -31,7 +31,7 @@ public class RFMSApiController {
     }
 
 
-    @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("positions/latestOnly")
     public ResponseEntity<String> getVehiclePositionsByLatestOnly(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -42,7 +42,7 @@ public class RFMSApiController {
         return getVehiclePositionByLatestOnlyUseCase.getVehiclesPositionByLatestOnly(authorization, triggerFilter, dateType, vin, accept);
     }
 
-    @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("positions/starttime")
     public ResponseEntity<GetVehiclePositionResponse> getVehiclePositionsByStartTime(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -57,13 +57,13 @@ public class RFMSApiController {
                 (authorization, triggerFilter, dateType, vin, accept, starttime, stoptime,lastVin);
     }
 
-    @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody final LoginRequest loginRequest) {
         return authorizationUseCase.login(loginRequest);
     }
 
-    @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("statuses/latestOnly")
     public ResponseEntity<String> getVehicleStatusesByLatestOnly(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -74,7 +74,7 @@ public class RFMSApiController {
             @RequestHeader("accept") String accept) {
         return getVehicleStatusByLatestOnlyUseCase.getVehiclesStatusesByLatestOnly(authorization,
                 triggerFilter, dateType, vin, accept,contentFilter);
-    } @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    } @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("statuses/starttime")
     public ResponseEntity<String> getVehicleStatusesByStarttime(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -88,7 +88,7 @@ public class RFMSApiController {
         return getVehicleStatusByStarttimeOnlyUseCase.getVehiclesStatusesByStarttime(authorization,triggerFilter,dateType,vin,accept,contentFilter,stoptime,starttime);
     }
 
-    @CrossOrigin(origins = "http://https://goranova124.github.io/:3000")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("moreData")
     public ResponseEntity<String> getMoreData(
             @RequestHeader(name = "url", required = true) String url,
