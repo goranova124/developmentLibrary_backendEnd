@@ -22,26 +22,32 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
+
+
 @Repository
 public class APIRepositoryImpl implements APIRepository {
-    private final String xmlFilePath = "C:\\Users\\Denitsa.Goranova\\DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API.xml";
 
     @Override
-    public Optional<APIEntity> getApiDetails(String name)  {
+    public Optional<APIEntity> getApiDetails(String name) {
         Optional<APIEntity> entity = Optional.empty();
         return entity;
     }
 
 
+    @Autowired
+    private ResourceLoader resourceLoader;
 
     @Override
     public List<APIEntity> getAPIS() {
         List<APIEntity> apiEntities = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API.xml");
 
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -61,7 +67,7 @@ public class APIRepositoryImpl implements APIRepository {
                     String type = apiElement.getElementsByTagName("API_TYPE").item(0).getTextContent();
                     String header = apiElement.getElementsByTagName("API_HEADER").item(0).getTextContent();
                     Long id = Long.valueOf((apiElement.getElementsByTagName("API_ID").item(0).getTextContent()));
-                    APIEntity apiEntity = new APIEntity(id, function, description, url, type, header, version, new ArrayList<>(), new ArrayList<>(),new ArrayList<>(), new ArrayList<>());
+                    APIEntity apiEntity = new APIEntity(id, function, description, url, type, header, version, new ArrayList<>(), new ArrayList<>(), new ArrayList<>(), new ArrayList<>());
 
                     List<ResponseParameterEntity> responseParameters = getResponseParameters(id);
                     apiEntity.setResponseParameterEntities(responseParameters);
@@ -93,14 +99,13 @@ public class APIRepositoryImpl implements APIRepository {
         return null;
     }
 
-    private List<LanguageEntity> getLanguages(Long apiId)   {
+    private List<LanguageEntity> getLanguages(Long apiId) {
 
         List<LanguageEntity> languageEntities = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_LANGUAGES.xml");
-
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_LANGUAGES.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -134,13 +139,12 @@ public class APIRepositoryImpl implements APIRepository {
 
     }
 
-    private List<ErrorCodeEntity> getErrorCodes(Long apiId)   {
+    private List<ErrorCodeEntity> getErrorCodes(Long apiId) {
         List<ErrorCodeEntity> errorCodeEntities = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_ERROR_CODES.xml");
-
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_ERROR_CODES.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -175,14 +179,14 @@ public class APIRepositoryImpl implements APIRepository {
         return errorCodeEntities;
     }
 
-    private List<RequestParametersEntity> getRequestParameters(Long apiId)   {
+    private List<RequestParametersEntity> getRequestParameters(Long apiId) {
 
         List<RequestParametersEntity> requestParametersEntities = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_REQUEST_PARAMETERS.xml");
 
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_REQUEST_PARAMETERS.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -202,7 +206,7 @@ public class APIRepositoryImpl implements APIRepository {
                         String type = getElementTextContent(responseElement, "PARAMETER_TYPE");
                         String description = getElementTextContent(responseElement, "PARAMETER_DESCRIPTION");
                         String example = getElementTextContent(responseElement, "PARAMETER_EXAMPLE");
-                        boolean required= Boolean.parseBoolean(getElementTextContent(responseElement, "PARAMETER_REQUIRED"));
+                        boolean required = Boolean.parseBoolean(getElementTextContent(responseElement, "PARAMETER_REQUIRED"));
 
                         RequestParametersEntity responseParameter = RequestParametersEntity.builder().parameterName(name).parameterRequired(required).parameterType(type).parameterDescription(description).parameterExample(example).build();
                         requestParametersEntities.add(responseParameter);
@@ -219,13 +223,13 @@ public class APIRepositoryImpl implements APIRepository {
     }
 
 
-    private List<ResponseParameterEntity> getResponseParameters(Long apiId)  {
+    private List<ResponseParameterEntity> getResponseParameters(Long apiId) {
         List<ResponseParameterEntity> responseParameters = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_RESPONSE_PARAMETERS.xml");
 
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_RESPONSE_PARAMETERS.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);
@@ -261,13 +265,13 @@ public class APIRepositoryImpl implements APIRepository {
         return responseParameters;
     }
 
-    private List<FeatureEntity> getFeatures(Long responseId)   {
+    private List<FeatureEntity> getFeatures(Long responseId) {
         List<FeatureEntity> featureEntities = new ArrayList<>();
 
         try {
-            File file = ResourceUtils.getFile("src/main/resource/DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_FEATURES.xml");
 
-            InputStream inputStream=new FileInputStream(file);
+            Resource resource = resourceLoader.getResource("classpath:DAF_TEST_DB.CONNECT_DEUTSCHETELECOM.GCS_DEV_LIBRARY_API_FEATURES.xml");
+            InputStream inputStream = resource.getInputStream();
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document document = builder.parse(inputStream);

@@ -13,19 +13,19 @@ import java.sql.SQLException;
 
 
 @RestController
-@CrossOrigin(origins = "https://goranova124.github.io/", allowedHeaders = "*")
+@CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/", allowedHeaders = "*")
 @RequestMapping("/apis")
 @AllArgsConstructor
 public class ApiController {
     private final GetAPIUseCase getAPIsUseCase;
     private final GetAPIDetailsUseCase getAPIUseCase;
-    @CrossOrigin(origins = "https://goranova124.github.io/")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping
     public ResponseEntity<Object> getApis() throws SQLException {
         GetAPISResponse api = getAPIsUseCase.getApiResponse();
         return ResponseEntity.status(HttpStatus.OK).body(api);
     }
-    @CrossOrigin(origins = "http://localhost:3000/")
+    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
     @GetMapping("/detailsApi")
     public ResponseEntity<Object> getApiByName(@RequestParam String name) throws SQLException {
         GetAPIDetailsResponse api = getAPIUseCase.getAPIDetails(name);

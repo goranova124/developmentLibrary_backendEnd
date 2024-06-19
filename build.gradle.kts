@@ -24,10 +24,8 @@ dependencies {
     testImplementation("junit:junit:4.13.1")
     testImplementation("org.junit.jupiter:junit-jupiter:5.8.1")
     implementation("org.jacoco:org.jacoco.core:0.8.7")
-    testImplementation ("org.mockito:mockito-junit-jupiter:3.12.4")
-
+    testImplementation("org.mockito:mockito-junit-jupiter:3.12.4")
 }
-
 
 tasks.test {
     useJUnitPlatform()
@@ -37,23 +35,20 @@ tasks.test {
 }
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
-            classDirectories.setFrom(
-                    files(classDirectories.files.map {
-                        fileTree(it).apply {
-                            exclude(
-                                    "com/baeldung//ExcludedPOJO.class",
-                                    "com/baeldung//DTO.",
-                                    "**/config/*",
-                                    "**/generated/**",
-                                    "**/org/example/persistence",
-
-                            )
-                        }
-                    }))
-//    }
-
+    classDirectories.setFrom(
+            files(classDirectories.files.map {
+                fileTree(it).apply {
+                    exclude(
+                            "com/baeldung//ExcludedPOJO.class",
+                            "com/baeldung//DTO.",
+                            "**/config/*",
+                            "**/generated/**",
+                            "**/org/example/persistence"
+                    )
+                }
+            }))
 }
+
 jacoco {
     toolVersion = "0.8.11"
-
 }
