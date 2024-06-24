@@ -2,7 +2,7 @@
 <data>
   <row>
     <API_FUNCTION>AUTHORIZATION</API_FUNCTION>
-    <API_DESC>The authorization resource reutrns a token to the client after they successfully authenticate themselves. They serve as proof of identity and are going to be used for the other APIs.</API_DESC>
+    <API_DESC>The authorization resource returns a token to the client after they successfully authenticate themselves. They serve as proof of identity and are going to be used for the other APIs.</API_DESC>
     <API_URL>https://api.connect.daf.com/rfms/token</API_URL>
     <API_TYPE>POST</API_TYPE>
     <API_HEADER>Authorization</API_HEADER>
@@ -21,7 +21,7 @@
   <row>
     <API_FUNCTION>GET_VEHICLES_POSITIONS with starttime</API_FUNCTION>
     <API_DESC>The vehicle position resource is used to get the positions for one or several vehicles. If the vin parameter is not set the response will contain all vehicles the client has access to. If a request is made for data in a period where no data has been received, an empty list will be returned. The max number of items returned in one call is OEM specific.</API_DESC>
-    <API_URL>https://api.connect.daf.com/rfms/vehiclepositions?starttime={startime}</API_URL>
+    <API_URL>https://api.connect.daf.com/rfms/vehiclepositions?starttime={starttime}</API_URL>
     <API_TYPE>GET</API_TYPE>
     <API_HEADER>List of vehicle position</API_HEADER>
     <API_ID>2</API_ID>
