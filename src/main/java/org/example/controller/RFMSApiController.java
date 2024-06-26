@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/", allowedHeaders = "*")
+@CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"},allowedHeaders = "*")
 @RequestMapping("/vehicles")
 @AllArgsConstructor
 public class RFMSApiController {
@@ -22,7 +22,7 @@ public class RFMSApiController {
     private final GetVehicleStatusByStarttimeOnlyUseCase getVehicleStatusByStarttimeOnlyUseCase;
     private final GetMoreDataUseCase getMoreDataUseCase;
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping
     public ResponseEntity<GetVehicleResponse> getVehicles(@RequestHeader("Authorization") String authorization,
                                                 @RequestHeader("Accept") String accept,
@@ -31,7 +31,7 @@ public class RFMSApiController {
     }
 
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping("positions/latestOnly")
     public ResponseEntity<String> getVehiclePositionsByLatestOnly(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -42,7 +42,7 @@ public class RFMSApiController {
         return getVehiclePositionByLatestOnlyUseCase.getVehiclesPositionByLatestOnly(authorization, triggerFilter, dateType, vin, accept);
     }
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping("positions/starttime")
     public ResponseEntity<GetVehiclePositionResponse> getVehiclePositionsByStartTime(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -57,13 +57,13 @@ public class RFMSApiController {
                 (authorization, triggerFilter, dateType, vin, accept, starttime, stoptime,lastVin);
     }
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody final LoginRequest loginRequest) {
         return authorizationUseCase.login(loginRequest);
     }
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping("statuses/latestOnly")
     public ResponseEntity<String> getVehicleStatusesByLatestOnly(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -74,7 +74,8 @@ public class RFMSApiController {
             @RequestHeader("accept") String accept) {
         return getVehicleStatusByLatestOnlyUseCase.getVehiclesStatusesByLatestOnly(authorization,
                 triggerFilter, dateType, vin, accept,contentFilter);
-    } @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    }
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping("statuses/starttime")
     public ResponseEntity<String> getVehicleStatusesByStarttime(
             @RequestHeader(name = "vin", required = false) String vin,
@@ -88,7 +89,7 @@ public class RFMSApiController {
         return getVehicleStatusByStarttimeOnlyUseCase.getVehiclesStatusesByStarttime(authorization,triggerFilter,dateType,vin,accept,contentFilter,stoptime,starttime);
     }
 
-    @CrossOrigin(origins = "https://goranova124.github.io/developmentLibrary/")
+    @CrossOrigin(origins = {"https://gentle-cliff-093aa731e.5.azurestaticapps.net/","https://www.paccarconnectdeveloperlibrary.com","https://paccarconnectdeveloperlibrary.com"})
     @GetMapping("moreData")
     public ResponseEntity<String> getMoreData(
             @RequestHeader(name = "url", required = true) String url,
