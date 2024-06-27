@@ -23,19 +23,22 @@ public class GetVehicleStatusByStarttimeUseCseImpl implements GetVehicleStatusBy
 
         headers.add("Authorization", authorization);
         headers.add("Accept", accept);
-        StringBuilder stringBuilder=new StringBuilder("https://api.connect.daf.com/rfms/vehiclestatuses?");
-        stringBuilder.append("starttime="+starttime);
+        StringBuilder stringBuilder = new StringBuilder("https://api.connect.daf.com/rfms/vehiclestatuses?");
+        stringBuilder.append("starttime=" + starttime);
 
-        if (triggerFilter!=null && !triggerFilter.trim().isEmpty()){
-            stringBuilder.append("&triggerFilter=").append(triggerFilter);        }
-        if (dataType!=null && !dataType.isEmpty()){
+        if (triggerFilter != null && !triggerFilter.trim().isEmpty()) {
+            stringBuilder.append("&triggerFilter=").append(triggerFilter);
+        }
+        if (dataType != null && !dataType.isEmpty()) {
             stringBuilder.append("&dataType=").append(dataType);
         }
-        if (vin!=null && !vin.isEmpty()){
+        if (vin != null && !vin.isEmpty()) {
             stringBuilder.append("&vin=").append(vin);
-        }if (contentFilter!=null && !contentFilter.isEmpty()){
+        }
+        if (contentFilter != null && !contentFilter.isEmpty()) {
             stringBuilder.append("&contentFilter=").append(contentFilter);
-        }  if (stoptime!=null && !stoptime.isEmpty()){
+        }
+        if (stoptime != null && !stoptime.isEmpty()) {
             stringBuilder.append("&stoptime=").append(stoptime);
         }
 
@@ -56,8 +59,6 @@ public class GetVehicleStatusByStarttimeUseCseImpl implements GetVehicleStatusBy
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
     }
-
-
 
 
 }
